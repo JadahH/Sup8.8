@@ -38,5 +38,30 @@ public class ConvertTests
             Assert.All(results, p => Assert.Equal(name, p.Name, ignoreCase: true));
         }
 
-     
-}
+     [Fact]
+        public void GetUserById_ShouldReturnPerson_WhenValidIdProvided()
+        {
+            // Arrange
+            int validId = 250000;
+
+            // Act
+            var person = repository.GetUserById(validId);
+
+            // Assert: The returned person is not null and has the expected ID.
+            Assert.NotNull(person);
+            Assert.Equal(validId, person.Id);
+        }
+
+    [Fact]
+        public void GetUserById_ShouldReturnNull_WhenInvalidIdProvided()
+        {
+            // Arrange
+            int invalidId = 1000001;
+
+            // Act
+            var person = repository.GetUserById(invalidId);
+
+            // Assert: No person should be found for an invalid ID.
+            Assert.Null(person);
+        }
+    }
