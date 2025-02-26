@@ -3,11 +3,29 @@ using System.Linq;
 
 namespace Int;
 
-    
+    /// <summary>
+/// Represents a person with an identifier, name, and birthday.
+/// </summary>
+/// "Id" Unique identifier for the person.
+/// "Name" The name of the person.
+/// "Birthday" The birthday of the person
+/// 
+
 public record Person(int Id, string Name, DateTime Birthday);
 public class Convert
 {
     private Person[] data;
+
+/// <summary>
+    /// Initializes the internal data collection with a million "Person" records.
+    /// </summary>
+    /// <remarks>
+    /// This method generates "Person" records with unique identifiers from 1 to 1,000,000.
+    /// Every 1000th record is assigned the name "Jane Doe", while all other records follow the naming pattern "Person_{id}".
+    /// The birthday for each person is randomly assigned to a date between January 1, 1950, and December 31, 2000.
+    /// </remarks>
+    /// <returns>This method does not return a value.</returns>
+
 
      public void InitializeData()
         {
