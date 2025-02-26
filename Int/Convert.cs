@@ -43,7 +43,7 @@ public class Convert
         }
 
 
-// <summary>
+/// <summary>
 /// Retrieves all people born after the specified date.
 /// </summary>
 /// <"date">The date to compare birthdays against.
@@ -58,10 +58,21 @@ public class Convert
             data.Where(p => p.Birthday > date).ToArray();
          
 
+        /// <summary>
+        /// Retrieves all people with the specified name from the data collection.
+        /// </summary>
+        /// <"name">The name to search for (case-insensitive).
+        /// <returns>
+        /// An array of <"Person"> objects whose <c>Name</c> matches the specified name.
+        /// Returns an empty array if no matches are found.
+        /// </returns>
+
         public Person[] GetPeopleByName(string name)
         {
             return data.Where(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase)).ToArray();
         }
+
+
 
         public Person? GetUserById(int id)
         {
