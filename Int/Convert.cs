@@ -42,6 +42,18 @@ public class Convert
                 .ToArray();
         }
 
+
+// <summary>
+/// Retrieves all people born after the specified date.
+/// </summary>
+/// <"date">The date to compare birthdays against.
+/// <returns>
+/// An array of <"Person"> objects representing the people
+/// whose birthday is greater than the specified date. If no people
+/// match the criteria, an empty array is returned.
+/// </returns>
+/// 
+
             public Person[] GetPeopleBornAfter(DateTime date) =>
             data.Where(p => p.Birthday > date).ToArray();
          
