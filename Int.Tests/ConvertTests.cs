@@ -21,6 +21,14 @@ public class ConvertTests
         repository.InitializeData();
     }
 
+    /// <summary>
+/// Tests that the GetPeopleBornAfter method returns only people whose birthdays are after the specified date.
+/// </summary>
+/// <remarks>
+/// This test sets a reference date (January 1, 1980) and then asserts that every person returned by 
+/// repository.GetPeopleBornAfter(testDate) has a Birthday greater than the test date.
+/// </remarks>
+/// <returns>This test method does not return any value.</returns>
 
     [Fact]
     public void GetPeopleBornAfter_ShouldReturnOnlyPeopleBornAfterSpecifiedDate()()
