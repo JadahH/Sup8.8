@@ -8,6 +8,14 @@ public class ConvertTests
 {
     private readonly Convert repository
     
+    /// <summary>
+    /// Initializes a new instance of the "ConvertTests"class.
+    /// </summary>
+    /// <remarks>
+    /// This constructor creates a new "Convert" instance and calls its InitializeData method 
+    /// to prepare the data required for testing.
+    /// </remarks>
+    /// 
         public Convert(){
         repository = new Convert();
         repository.InitializeData();
