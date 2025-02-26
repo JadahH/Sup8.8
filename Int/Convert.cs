@@ -73,6 +73,13 @@ public class Convert
         }
 
 
+        /// <summary>
+        /// Retrieves a <"Person"> from the data collection that matches the specified identifier.
+        /// </summary>
+        /// <"id">The unique identifier of the <"Person"> to retrieve.
+        /// <returns>
+        /// A <"Person"> if one is found that matches the given <"id">; otherwise, <c>null</c>.
+        /// </returns>
 
         public Person? GetUserById(int id)
         {
