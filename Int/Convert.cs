@@ -33,6 +33,10 @@ public class Convert
             return data.Where(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase)).ToArray();
         }
 
+        public Person? GetUserById(int id)
+        {
+            return data.FirstOrDefault(p => p.Id == id);
+        }
 
 
 
