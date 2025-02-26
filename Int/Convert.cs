@@ -27,4 +27,15 @@ public class Convert
             public Person[] GetPeopleBornAfter(DateTime date) =>
             data.Where(p => p.Birthday > date).ToArray();
          
+
+        public Person[] GetPeopleByName(string name)
+        {
+            return data.Where(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase)).ToArray();
+        }
+
+
+
+
 }
+
+
