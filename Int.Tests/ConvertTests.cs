@@ -40,6 +40,20 @@ public class ConvertTests
 
     }
 
+        /// <summary>
+        /// Tests that repository.GetPeopleByName< returns a collection of people 
+        /// whose names match the provided name when such persons exist.
+        /// </summary>
+        /// <remarks>
+        /// This test uses the name "Jane Doe" (expected for persons with an Id divisible by 1000)
+        /// and asserts that the resulting collection is not empty. It also verifies that each person 
+        /// in the returned collection has a name equal to "Jane Doe", ignoring case.
+        /// </remarks>
+        /// <returns>
+        /// This test method does not return a value.
+        /// </returns>
+
+
      [Fact]
         public void GetPeopleByName_ShouldReturnMatchingPeople_WhenFound()
         {
